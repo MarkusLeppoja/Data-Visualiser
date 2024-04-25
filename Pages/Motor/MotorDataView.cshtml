@@ -1,0 +1,20 @@
+﻿@page
+@model Data_Visualiser.Pages.Motor.MotorDataViewModel
+@{
+    ViewData["Title"] = "Sugar Motor";
+}
+
+<body style="background: repeating-linear-gradient(to bottom right, #212F3C, #EB984E);"></body>
+
+
+
+<div class="position-sticky opacity-75">
+    <div class="grafana_graph_r0_c0 position-absolute top-0 start-0">
+        <iframe src="http://localhost:3000/d-solo/fdjtgb4dj5o1sc/sugar-motor-dashboard?orgId=1&from=1714031684036&to=1714074884036&theme=dark&panelId=1" frameborder="0" width="500" height="250";></iframe>
+    </div>
+
+<div class="grafana_graph_r0_c1 position-absolute top-5 start-3">
+        <iframe src="http://localhost:3000/d-solo/fdjtgb4dj5o1sc/sugar-motor-dashboard?orgId=1&from=1714031684036&to=1714074884036&theme=dark&panelId=2" frameborder="0" width="500" height="250";></iframe>
+    </div>
+
+</div>
