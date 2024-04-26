@@ -2,10 +2,18 @@
 @model Data_Visualiser.Pages.Motor.MotorDataViewModel
 @{
     ViewData["Title"] = "Sugar Motor";
-    string GrafanaGraph1 = "http://localhost:3000/d-solo/fdjtgb4dj5o1sc/sugar-motor-dashboard?orgId=1&from=1714031684036&to=1714074884036&theme=dark&panelId=1";
-    string GrafanaGraph2 = "http://localhost:3000/d-solo/fdjtgb4dj5o1sc/sugar-motor-dashboard?orgId=1&from=1714031684036&to=1714074884036&theme=dark&panelId=2";
-    string GrafanaGraph3 = "http://localhost:3000/d-solo/fdjtgb4dj5o1sc/sugar-motor-dashboard?orgId=1&from=1714031684036&to=1714074884036&theme=dark&panelId=2";
-    string GrafanaGraph4 = "http://localhost:3000/d-solo/fdjtgb4dj5o1sc/sugar-motor-dashboard?orgId=1&from=1714031684036&to=1714074884036&theme=dark&panelId=4";
+    @* Row 1 *@
+    string GrafanaGraph_1 = "http://localhost:3000/d-solo/fdjtgb4dj5o1sc/sugar-motor-dashboard?orgId=1&from=1714031684036&to=1714074884036&theme=dark&panelId=1";
+    string GrafanaGraph_2 = "";
+    string GrafanaGraph_3 = "";
+    string GrafanaGraph_4 = ""; 
+    string GrafanaGraph_5 = "";
+    string GrafanaGraph_6 = "";
+    string GrafanaGraph_7 = "";
+    string GrafanaGraph_8 = "";
+    string GrafanaGraph_9 = "";
+    string GrafanaGraph_10 = "";
+
 
     int GraphWidth = 475;
     int GraphHeight = 225;
@@ -16,76 +24,66 @@
 
 <body style="background: repeating-linear-gradient(to bottom right, #212F3C, #EB984E);"></body>
 
-
-@namespace Data_Visualiser.Pages.Motor
-@*<div class="position-absolute top-0 start-0"; style=" ">
-    <div id="top-row" style=" outline-width:0; border:0; width:100%; overflow: auto; ">
-        <iframe class="shadow " src="@GrafanaGraph1" width="@GraphWidth"; height="@GraphHeight" style=" "></iframe>
-        <iframe class="shadow" src="@GrafanaGraph1" width="@GraphWidth"; height="@GraphHeight" style=" "></iframe>
-        <iframe class="shadow" src="@GrafanaGraph1" width="@GraphWidth"; height="@GraphHeight" style=" "></iframe>
-        <iframe class="shadow" src="@GrafanaGraph1" width="@GraphWidth"; height="@GraphHeight" style=" "></iframe>
-    </div>*@
-
-
-
     @*Has a minimum height and width; Default width = 25% of the page; Default height = 25% page; scales and doesn't skil to the next page*@
 
-<div id="Graphs">
-    <div id="Top Row" 
-        class="row bg-black position-absolute start-0 top-0" 
-        style="width: 99.2%; margin-left: 0.45%; margin-right: 99.55%; height: 24%;">
+@using Data_Visualiser.Pages.Motor
+<div id="Page Content" 
+    class="bg-transparent position-absolute top-0 start-0" 
+    style="width: 100%; height: 95%">
+    
+        <div id="Graphs-Background" 
+            class="bg-transparent shadow" 
+            style="width: 63%; height: 91%; margin-top: 2%; margin-bottom: 7%; margin-left: 2%; margin-right: 35%; padding: 1%">
+            
+                <div id="Graphs" 
+                    class="bg-black" 
+                    style="margin: 0%; width: 100%; height: 100%; padding: 0%">
 
-        @*<iframe id = "G-T-1"
-            class="shadow " 
-            src="@GrafanaGraph1" 
-            style="width: 24.8%; height: 100%">
-        </iframe>
-        
-        <iframe id = "G-T-2"
-            class="shadow " 
-            src="@GrafanaGraph1" 
-            style="width: 24.8%; height: 100%">
-        </iframe>
-
-        <iframe id = "G-T-3"
-            class="shadow " 
-            src="@GrafanaGraph1" 
-            style="width: 24.8%; height: 100%">
-        </iframe>
-
-        <iframe id = "G-T-4"
-            class="shadow position-absolute" 
-            src="@GrafanaGraph1" 
-            style="width: 24.8%; height: 100%; margin-left: 0.25%">
-        </iframe>*@
-   </div>
-
-    <div id="Middle Row" 
-            class="row bg-warning position-absolute start-0 top-0" 
-            style="width: 99.2%; margin-left: 0.45%; margin-right: 99.55%; height: 24%; margin-top: 12.25%">
-
-            @*<iframe id = "G-M-1"
-                class="shadow " 
-                src="@GrafanaGraph1" 
-                style="width: 24.8%; height: 100%">
-            </iframe>
-        
-            <iframe id = "G-M-2"
-                class="shadow " 
-                src="@GrafanaGraph1" 
-                style="width: 24.8%; height: 100%">
-            </iframe>
-
-            <iframe id = "G-M-3"
-                class="shadow " 
-                src="@GrafanaGraph1" 
-                style="width: 24.8%; height: 100%">
-            </iframe>
-
-            <iframe id = "G-M-4"
-                class="shadow position-absolute" 
-                src="@GrafanaGraph1" 
-                style="width: 24.8%; height: 100%; margin-left: 0.25%">
-            </iframe>*@
+                        <div id="Top-Row" class="row d-flex align-content-stretch flex-wrap" style="height: 33.4%; width: 100%; margin: 0%; padding: 0%">
+                            <div class="col" style="padding: 0%">
+                                <iframe
+                                    src="@GrafanaGraph_1" 
+                                    style="width: 100%; height: 100%;">
+                                </iframe>
+                            </div>
+                           <div class="col" style="padding: 0%">
+                                <iframe
+                                    src="@GrafanaGraph_2" 
+                                    style="width: 100%; height: 100%;">
+                                </iframe>
+                            </div>
+                           <div class="col" style="padding: 0%">
+                                    <iframe
+                                        src="@GrafanaGraph_3" 
+                                        style="width: 100%; height: 100%;">
+                                    </iframe>
+                                </div>
+                            </div>
+                    <div id="Mid-Row" class="row bg-black" style="height: 33.4%; width: 100%; margin: 0; padding: 0">
+                            <div class="col" style="padding: 0%">
+                                <iframe
+                                    class="shadow" 
+                                    src="@GrafanaGraph_4" 
+                                    style="width: 100%; height: 100%;">
+                                </iframe>
+                            </div>
+                           <div class="col" style="padding: 0%">
+                                <iframe
+                                    class="shadow" 
+                                    src="@GrafanaGraph_5" 
+                                    style="width: 100%; height: 100%;">
+                                </iframe>
+                            </div>
+                    </div>
+                    <div id="Bottom-Row" class="row bg-black" style="height: 33.34%; width: 100%; margin: 0%; padding: 0">
+                            <div class="col" style="padding: 0%">
+                                <iframe
+                                    class="shadow" 
+                                    src="@GrafanaGraph_6" 
+                                    style="width: 100%; height: 100%;">
+                                </iframe>
+                            </div>
+                    </div>
+        </div>
     </div>
 </div>
