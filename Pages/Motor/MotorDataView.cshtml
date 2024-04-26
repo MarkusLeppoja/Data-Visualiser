@@ -2,19 +2,90 @@
 @model Data_Visualiser.Pages.Motor.MotorDataViewModel
 @{
     ViewData["Title"] = "Sugar Motor";
+    string GrafanaGraph1 = "http://localhost:3000/d-solo/fdjtgb4dj5o1sc/sugar-motor-dashboard?orgId=1&from=1714031684036&to=1714074884036&theme=dark&panelId=1";
+    string GrafanaGraph2 = "http://localhost:3000/d-solo/fdjtgb4dj5o1sc/sugar-motor-dashboard?orgId=1&from=1714031684036&to=1714074884036&theme=dark&panelId=2";
+    string GrafanaGraph3 = "http://localhost:3000/d-solo/fdjtgb4dj5o1sc/sugar-motor-dashboard?orgId=1&from=1714031684036&to=1714074884036&theme=dark&panelId=2";
+    string GrafanaGraph4 = "http://localhost:3000/d-solo/fdjtgb4dj5o1sc/sugar-motor-dashboard?orgId=1&from=1714031684036&to=1714074884036&theme=dark&panelId=4";
+
+    int GraphWidth = 475;
+    int GraphHeight = 225;
+
+    int MinGraphWidth = 460;
+    int MinGraphHeight = 460;
 }
 
 <body style="background: repeating-linear-gradient(to bottom right, #212F3C, #EB984E);"></body>
 
 
+@namespace Data_Visualiser.Pages.Motor
+@*<div class="position-absolute top-0 start-0"; style=" ">
+    <div id="top-row" style=" outline-width:0; border:0; width:100%; overflow: auto; ">
+        <iframe class="shadow " src="@GrafanaGraph1" width="@GraphWidth"; height="@GraphHeight" style=" "></iframe>
+        <iframe class="shadow" src="@GrafanaGraph1" width="@GraphWidth"; height="@GraphHeight" style=" "></iframe>
+        <iframe class="shadow" src="@GrafanaGraph1" width="@GraphWidth"; height="@GraphHeight" style=" "></iframe>
+        <iframe class="shadow" src="@GrafanaGraph1" width="@GraphWidth"; height="@GraphHeight" style=" "></iframe>
+    </div>*@
 
-<div class="position-sticky opacity-75">
-    <div class="grafana_graph_r0_c0 position-absolute top-0 start-0">
-        <iframe src="http://localhost:3000/d-solo/fdjtgb4dj5o1sc/sugar-motor-dashboard?orgId=1&from=1714031684036&to=1714074884036&theme=dark&panelId=1" frameborder="0" width="500" height="250";></iframe>
+
+
+    @*Has a minimum height and width; Default width = 25% of the page; Default height = 25% page; scales and doesn't skil to the next page*@
+
+<div id="Graphs">
+    <div id="Top Row" 
+        class="row bg-black position-absolute start-0 top-0" 
+        style="width: 99.2%; margin-left: 0.45%; margin-right: 99.55%; height: 24%;">
+
+        @*<iframe id = "G-T-1"
+            class="shadow " 
+            src="@GrafanaGraph1" 
+            style="width: 24.8%; height: 100%">
+        </iframe>
+        
+        <iframe id = "G-T-2"
+            class="shadow " 
+            src="@GrafanaGraph1" 
+            style="width: 24.8%; height: 100%">
+        </iframe>
+
+        <iframe id = "G-T-3"
+            class="shadow " 
+            src="@GrafanaGraph1" 
+            style="width: 24.8%; height: 100%">
+        </iframe>
+
+        <iframe id = "G-T-4"
+            class="shadow position-absolute" 
+            src="@GrafanaGraph1" 
+            style="width: 24.8%; height: 100%; margin-left: 0.25%">
+        </iframe>*@
+   </div>
+
+    <div id="Middle Row" 
+            class="row bg-warning position-absolute start-0 top-0" 
+            style="width: 99.2%; margin-left: 0.45%; margin-right: 99.55%; height: 24%; margin-top: 12.25%">
+
+            @*<iframe id = "G-M-1"
+                class="shadow " 
+                src="@GrafanaGraph1" 
+                style="width: 24.8%; height: 100%">
+            </iframe>
+        
+            <iframe id = "G-M-2"
+                class="shadow " 
+                src="@GrafanaGraph1" 
+                style="width: 24.8%; height: 100%">
+            </iframe>
+
+            <iframe id = "G-M-3"
+                class="shadow " 
+                src="@GrafanaGraph1" 
+                style="width: 24.8%; height: 100%">
+            </iframe>
+
+            <iframe id = "G-M-4"
+                class="shadow position-absolute" 
+                src="@GrafanaGraph1" 
+                style="width: 24.8%; height: 100%; margin-left: 0.25%">
+            </iframe>*@
     </div>
-
-<div class="grafana_graph_r0_c1 position-absolute top-5 start-3">
-        <iframe src="http://localhost:3000/d-solo/fdjtgb4dj5o1sc/sugar-motor-dashboard?orgId=1&from=1714031684036&to=1714074884036&theme=dark&panelId=2" frameborder="0" width="500" height="250";></iframe>
-    </div>
-
 </div>
